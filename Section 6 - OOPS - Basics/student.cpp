@@ -23,6 +23,13 @@ public:
     - purpose: initializes properies of an object with default values
     - constructor is only called once, during the creation of new object
     - every class has an 'internal constructor', when you create your own the internal constructor is no longer used/called
+    - NOTE: if ONLY a parameterized constructor is used, default (internal) constructor is now not available. If object is initialized without a paramter, no matching constructor error will be thrown
+    **/
+
+
+    /**
+        - When a function is called on a function, the (memory) address of the object is also passed
+        - This address can be accessed using 'this' keyword
 
     **/
 
@@ -33,8 +40,17 @@ public:
     }
 
     // parameterized constructor
-    Student(int a) {
+    Student(int age) {
+        this.age = a; //by using 'this' here, we can utilize an argument of the same name as the property of the object
     cout<<"para constructor called"<<endl;
+    }
+
+    Student(int a, int r){
+    cout<< "this "<<this<<endl;
+    age = a;
+    rollNumber = r;
+
+    cout<<"contructor THREE called"<<endl;
     }
 
     int rollNumber;
