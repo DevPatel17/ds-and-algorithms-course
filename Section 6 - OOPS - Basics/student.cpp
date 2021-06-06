@@ -41,7 +41,7 @@ public:
 
     // parameterized constructor
     Student(int age) {
-        this.age = a; //by using 'this' here, we can utilize an argument of the same name as the property of the object
+        this->age = age; //by using 'this' here, we can utilize an argument of the same name as the property of the object
     cout<<"para constructor called"<<endl;
     }
 
