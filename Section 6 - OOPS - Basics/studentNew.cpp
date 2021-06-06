@@ -5,12 +5,17 @@ using namespace std;
 int main()
 {
 
-    Student s1(10,100);
-    cout<<"Address of s1 "<<&s1<<endl;
+    Student s1; // constructor 1 called
 
-    Student *s2 = new Student(12,200);
+    Student s2(100); // constructor 2 called
 
-    cout<<"Address of s2 "<<s2<<endl;
+    Student s3(10,100); // constructor 3 called
+
+    Student s4(s3); // constructor 3 called
+
+    s1 = s2; // copy assignment called
+
+    Student s5 = s3; //compiler will optimize this line and call copy constructor only instead of constructor 1 and then copy assignment operator
 
 //    Student s2;
 //    s2.display();
