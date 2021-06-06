@@ -67,4 +67,23 @@ public:
     void setAge(int value){
         age = value;
     }
+
+
+/**
+    Properties of destructors
+
+        - same name as class name
+        - no return type
+        - no input arguments
+        - identified by a '~' symbol
+
+        - unlike constructors, can only have ONE destructor
+        - only called once in the lifetime of an object (when the scope of the object is finished)
+        - if we create our own destructor, inbuilt destructor is no longer called
+
+**/
+
+    ~Student(){
+        cout<<"Destructor called "<<endl;
+    }
 };
